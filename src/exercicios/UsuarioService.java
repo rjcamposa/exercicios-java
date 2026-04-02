@@ -7,6 +7,14 @@ public class UsuarioService {
     private ArrayList<Usuario> usuarios = new ArrayList<>();
 
     public void cadastrar(Usuario u) {
+    	
+    	for (int i = 0; i < usuarios.size(); i++) {
+    		if (usuarios.get(i).getEmail().equals(u.getEmail())) {
+    			System.out.println("Email já cadastrado!");
+    			return;
+    		}
+    	}
+    	
         usuarios.add(u);
         System.out.println("Usuário cadastrado!");
     }

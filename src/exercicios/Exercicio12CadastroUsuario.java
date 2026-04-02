@@ -32,6 +32,9 @@ public class Exercicio12CadastroUsuario {
                 System.out.println("Digite a idade:");
                 u.setIdade(scanner.nextInt());
                 scanner.nextLine();
+                
+                System.out.println("Digite o email:");
+                u.setEmail(scanner.nextLine());
 
                 service.cadastrar(u);
             }
